@@ -1,0 +1,47 @@
+<section class="article-section">
+  <div class="container">
+    <h1 class="article-title">news | <a href="#">all news</a></h1>
+    <div class="article-wrapper" *ngIf="data">
+      <a [routerLink]="['/details/', item.id]"  class="article" *ngFor="let item of data">
+        <div class="img-block" [style.backgroundImage]="'url('+ item.img +')'"></div>
+        <h1 class="article-header">{{item.title}}</h1>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="featured-section">
+  <div class="container">
+    <h1 class="featured-title">Featured | <a href="#">view all featured media</a></h1>
+    <div class="article-wrapper clearfix">
+      <article class="featured-article float-left">
+        <h1 class="feature-article-title">Responsive Web Design</h1>
+        <div class="text-box-wrapper clearfix">
+          <img class="featured-img float-left" src="assets/img/mobile.png">
+          <p class="featured-text float-right">
+            approach that suggests that design and development should respond to the <span>user's</span> behavior and environment based on screen size, platform and orientation.
+
+          </p>
+        </div>
+
+        <div class="read-more-wrapper clearfix">
+          <a class="float-right" href="#">read more</a>
+        </div>
+
+      </article>
+      <article class="featured-article float-right">
+        <h1 class="feature-article-title">Responsive Web Design</h1>
+        <div class="text-box-wrapper clearfix">
+          <img class="featured-img float-left" src="assets/img/mobile.png">
+          <p class="featured-text float-right">
+            approach that suggests that design and development should respond to the <span>user's</span> behavior and environment based on screen size, platform and orientation.
+          </p>
+        </div>
+
+        <div class="read-more-wrapper clearfix">
+          <a class="float-right" href="#">read more</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

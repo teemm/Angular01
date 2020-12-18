@@ -1,0 +1,28 @@
+<ng-container *ngIf="printData">
+<!--  <section class="news-details-section">-->
+<!--    <div class="container clearfix">-->
+<!--      <div class="left-block float-left">-->
+<!--        <a href="#" class="cat-detial">-->
+<!--          <span class="vertical-middle display-inline-block">NEWS</span>-->
+<!--        </a>-->
+<!--        <a href="#" class="cat-detial">-->
+<!--          <span class="vertical-middle display-inline-block">NEWS</span>-->
+<!--        </a>-->
+<!--      </div>-->
+<!--      <a href="#" class="right-block float-right see-next">-->
+<!--        see next-->
+<!--      </a>-->
+<!--    </div>-->
+<!--  </section>-->
+  <article class="container detail-article-wrapper">
+<!--    <div class="date-block display-inline-block">-->
+<!--      <div class="number">08</div>-->
+<!--      <div class="motnh">march</div>-->
+<!--    </div>-->
+    <h1 class="detail-article-title">{{printData.title}}</h1>
+    <div class="text-box">
+      <img [src]="printData.img" alt="typography">
+      <p>{{printData.longText}}</p>
+    </div>
+  </article>
+</ng-container>
