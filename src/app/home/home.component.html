@@ -1,0 +1,14 @@
+<div class="filters-block">
+  <a style="display: block" *ngFor="let item of arr" (click)="filterItems(item)" >
+    <span class="name">name: {{item.name}}</span>
+    <span class="age">age: {{item.age}}</span>
+  </a>
+</div>
+<h1>this is content</h1>
+<div class="wrapper">
+  <div *ngFor="let item of arr1">
+    <span class="name">name: {{item.name}}</span>
+    <span class="age">age: {{item.age}}</span>
+    <span class="status">isVerify: {{item.status}}</span>
+  </div>
+</div>
