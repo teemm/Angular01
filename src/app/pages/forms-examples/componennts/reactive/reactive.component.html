@@ -1,0 +1,22 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+  <input formControlName="name" placeholder="Your name">
+  <div *ngIf="myForm.get('name').hasError('required')">
+    სახელი ჩაწერე ბიჭო!
+  </div>
+
+  <input formControlName="email" placeholder="Your email">
+  <div *ngIf="myForm.get('email').touched && myForm.get('email').hasError('required')">
+    მეილი აუცილებელია ბიჭო!
+  </div>
+  <div *ngIf="myForm.get('email').touched && myForm.get('email').hasError('email')">
+    არასწორი ფორმატით წერ ბიჭო!
+  </div>
+  <input formControlName="message" placeholder="Your message">
+  <div *ngIf="myForm.controls.message.touched && myForm.controls.message.hasError('required')">
+    მესიჯი აუცილებელია ბიჭო!
+  </div>
+  <div *ngIf="myForm.controls.message.touched && myForm.controls.message.hasError('pattern')">
+    მესიჯი ფორმატით წერ ბიჭო!
+  </div>
+  <button type="submit">Send</button>
+</form>

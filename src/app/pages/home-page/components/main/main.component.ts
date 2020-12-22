@@ -60,7 +60,7 @@ export class MainComponent implements OnInit {
       title: 'Interface Design 4',
       longText: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
         'Duis scelerisque arcu eget sem efficitur, in imperdiet magna finibus.' +
-        ' Morbi quis est a dolor auctor luctus. Proin in libero quis tortor facilisis ' +
+        'Morbi quis est a dolor auctor luctus. Proin in libero quis tortor facilisis ' +
         'euismod. Phasellus pellentesque pharetra enim tincidunt blandit. Curabitur ' +
         'elementum condimentum ipsum a mollis. Morbi fermentum velit et viverra ullamcorper. ' +
         'Praesent sed sem mattis, placerat elit et, vestibulum leo. Vivamus posuere eu libero et ' +

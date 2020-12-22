@@ -1,28 +1,90 @@
-<ng-container *ngIf="printData">
-<!--  <section class="news-details-section">-->
-<!--    <div class="container clearfix">-->
-<!--      <div class="left-block float-left">-->
-<!--        <a href="#" class="cat-detial">-->
-<!--          <span class="vertical-middle display-inline-block">NEWS</span>-->
-<!--        </a>-->
-<!--        <a href="#" class="cat-detial">-->
-<!--          <span class="vertical-middle display-inline-block">NEWS</span>-->
-<!--        </a>-->
-<!--      </div>-->
-<!--      <a href="#" class="right-block float-right see-next">-->
-<!--        see next-->
-<!--      </a>-->
-<!--    </div>-->
-<!--  </section>-->
-  <article class="container detail-article-wrapper">
-<!--    <div class="date-block display-inline-block">-->
-<!--      <div class="number">08</div>-->
-<!--      <div class="motnh">march</div>-->
-<!--    </div>-->
-    <h1 class="detail-article-title">{{printData.title}}</h1>
-    <div class="text-box">
-      <img [src]="printData.img" alt="typography">
-      <p>{{printData.longText}}</p>
+<div class="navigation-box gray">
+  <div class="container clearfix">
+    <ul class="navigation-box-ul float-left">
+      <li class="navigation-box-li inline-block">
+        <a href="#" class="navigation-box-a inline-block">contact</a>
+      </li>
+      <li class="navigation-box-li inline-block">
+        <a href="#" class="navigation-box-a inline-block">news 1</a>
+      </li>
+    </ul>
+    <ul class="see-next-ul float-right">
+      <li class="see-next-li">
+        <a href="#" class="see-next-a">see next</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<article class="new-artcle container">
+  <div class="date-block">
+    <span class="date">18</span>
+    <span class="month">march</span>
+  </div>
+  <h1 class="new-title">Typography Lab</h1>
+  <div class="article-text-wrapper">
+    <img class="float-left new-article-img" src="img/typography.jpg" alt="typography">
+    <p class="article-text-p">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque arcu eget sem efficitur, in imperdiet magna finibus. Morbi quis est a dolor auctor luctus. Proin in libero quis tortor facilisis euismod. Phasellus pellentesque pharetra enim tincidunt blandit. Curabitur elementum condimentum ipsum a mollis. Morbi fermentum velit et viverra ullamcorper. Praesent sed sem mattis, placerat elit et, vestibulum leo. Vivamus posuere eu libero et sollicitudin. In hac habitasse platea dictumst. Ut maximus augue semper, vulputate libero sed, semper tellus.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque arcu eget sem efficitur, in imperdiet magna finibus. Morbi quis est a dolor auctor luctus. Proin in libero quis tortor facilisis euismod. Phasellus pellentesque pharetra enim tincidunt blandit. Curabitur elementum condimentum ipsum a mollis. Morbi fermentum velit et viverra ullamcorper. Praesent sed sem mattis, placerat elit et, vestibulum leo. Vivamus posuere eu libero et sollicitudin. In hac habitasse platea dictumst. Ut maximus augue semper, vulputate libero sed, semper tellus.
+    </p>
+    <p class="article-text-p">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque arcu eget sem efficitur, in imperdiet magna finibus. Morbi quis est a dolor auctor luctus. Proin in libero quis tortor facilisis euismod. Phasellus pellentesque pharetra enim tincidunt blandit. Curabitur elementum condimentum ipsum a mollis. Morbi fermentum velit et viverra ullamcorper. Praesent sed sem mattis, placerat elit et, vestibulum leo. Vivamus posuere eu libero et sollicitudin. In hac habitasse platea dictumst. Ut maximus augue semper, vulputate libero sed, semper tellus.
+    </p>
+    <p class="article-text-p">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque arcu eget sem efficitur, in imperdiet magna finibus. Morbi quis est a dolor auctor luctus. Proin in libero quis tortor facilisis euismod. Phasellus pellentesque pharetra enim tincidunt blandit. Curabitur elementum condimentum ipsum a mollis. Morbi fermentum velit et viverra ullamcorper. Praesent sed sem mattis, placerat elit et, vestibulum leo. Vivamus posuere eu libero et sollicitudin. In hac habitasse platea dictumst. Ut maximus augue semper, vulputate libero sed, semper tellus.
+    </p>
+  </div>
+</article>
+<div class="reseurce-tag">
+  <div class="container reseurce-tag-wrapper">
+    <a class="left-block" href="#">go back</a>
+    <ul class="recurse-tag-ul">
+      <li class="recurse-tag-li">
+        <a href="#" class="recurse-tag-a">
+          <img class="recurse-tag-img" src="img/fb-share.svg" alt="fb-share">
+        </a>
+      </li>
+      <li class="recurse-tag-li">
+        <a href="#" class="recurse-tag-a">
+          <img class="recurse-tag-img" src="img/fb-share.svg" alt="fb-share">
+        </a>
+      </li>
+      <li class="recurse-tag-li">
+        <a href="#" class="recurse-tag-a">
+          <img class="recurse-tag-img" src="img/fb-share.svg" alt="fb-share">
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<section class="feature-block">
+  <div class="container">
+    <h1 class="title-heading">
+      Featured |  <a class="link" href="#">view all featured media</a>
+    </h1>
+    <div class="featured-wrapper">
+      <article class="feature-item">
+        <h1 class="title">Responsive Web Design</h1>
+        <div class="content-wrapper">
+          <img class="content-img inline-block vertical-top" src="img/finger.png" alt="finger"><!--
+                            --><p class="content-p inline-block vertical-top">approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation.</p>
+        </div>
+      </article>
+      <article class="feature-item">
+        <h1 class="title">Responsive Web Design</h1>
+        <div class="content-wrapper">
+          <img class="content-img inline-block vertical-top" src="img/finger.png" alt="finger"><!--
+                            --><p class="content-p inline-block vertical-top">approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation.</p>
+        </div>
+      </article>
     </div>
-  </article>
-</ng-container>
+  </div>
+
+</section>
+
+
+<!--<form>-->
+<!--  <input type="text" name="username">-->
+<!--  <input type="password" name="password">-->
+<!--</form>-->
+
