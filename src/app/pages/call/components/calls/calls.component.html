@@ -1,0 +1,27 @@
+<form [formGroup]="form" class="post-wrapper container" (submit)="submitForm(form)">
+  <input formControlName="text" type="text" placeholder="Your Text">
+  <button>შენახვა</button>
+</form>
+
+
+<div class="post-wrapper container" *ngIf="data">
+  <div class="post" *ngFor="let item of data; trackBy: trackByFn"
+       [class.red]="!item.completed">
+    <div class="left-bloc">
+      <h2 class="title">{{item.text}}</h2>
+      <!--      <p class="desc">{{item.body}}</p>-->
+    </div>
+    <div class="right-block">
+      <button (click)="delete(item)">წაშლა</button>
+      <!--      <button *ngIf="!item.completed" (click)="activateItem(item)">გააქტიურება</button>-->
+      <!--      <button *ngIf="item.completed" (click)="deActivateItem(item)">დეაქტივაცია</button>-->
+      <input type="checkbox" [checked]="item.completed" (change)="checkStatus($event, item)">
+    </div>
+  </div>
+</div>
+
+<div class="loader" *ngIf="!data">
+
+  <div *ngIf="errors">someting wrong</div>
+  <div *ngIf="!errors">loading</div>
+</div>

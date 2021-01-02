@@ -10,6 +10,8 @@ import { MainComponent } from './components/main/main.component';
   imports: [
     CommonModule,
     HomePageRoutingModule
-  ]
+  ],
+  providers: []
+
 })
 export class HomePageModule { }

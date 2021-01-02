@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { DetailsPageRoutingModule } from './details-page-routing.module';
-import { MainComponent } from './components/main/main.component';
+import {DetailsPageRoutingModule} from './details-page-routing.module';
+import {MainComponent} from './components/main/main.component';
 
 
 @NgModule({
@@ -10,6 +10,8 @@ import { MainComponent } from './components/main/main.component';
   imports: [
     CommonModule,
     DetailsPageRoutingModule
-  ]
+  ],
+  providers: []
 })
-export class DetailsPageModule { }
+export class DetailsPageModule {
+}

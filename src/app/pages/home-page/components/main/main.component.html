@@ -1,50 +1,3 @@
-<!--<section class="article-section">-->
-<!--  <div class="container">-->
-<!--    <h1 class="article-title">news | <a href="#">all news</a></h1>-->
-<!--    <div class="article-wrapper" *ngIf="data">-->
-<!--      <a [routerLink]="['/details/', item.id]"  class="article" *ngFor="let item of data">-->
-<!--        <div class="img-block" [style.backgroundImage]="'url('+ item.img +')'"></div>-->
-<!--        <h1 class="article-header">{{item.title}}</h1>-->
-<!--      </a>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
-
-<!--<section class="featured-section">-->
-<!--  <div class="container">-->
-<!--    <h1 class="featured-title">Featured | <a href="#">view all featured media</a></h1>-->
-<!--    <div class="article-wrapper clearfix">-->
-<!--      <article class="featured-article float-left">-->
-<!--        <h1 class="feature-article-title">Responsive Web Design</h1>-->
-<!--        <div class="text-box-wrapper clearfix">-->
-<!--          <img class="featured-img float-left" src="assets/img/mobile.png">-->
-<!--          <p class="featured-text float-right">-->
-<!--            approach that suggests that design and development should respond to the <span>user's</span> behavior and environment based on screen size, platform and orientation.-->
-
-<!--          </p>-->
-<!--        </div>-->
-
-<!--        <div class="read-more-wrapper clearfix">-->
-<!--          <a class="float-right" href="#">read more</a>-->
-<!--        </div>-->
-
-<!--      </article>-->
-<!--      <article class="featured-article float-right">-->
-<!--        <h1 class="feature-article-title">Responsive Web Design</h1>-->
-<!--        <div class="text-box-wrapper clearfix">-->
-<!--          <img class="featured-img float-left" src="assets/img/mobile.png">-->
-<!--          <p class="featured-text float-right">-->
-<!--            approach that suggests that design and development should respond to the <span>user's</span> behavior and environment based on screen size, platform and orientation.-->
-<!--          </p>-->
-<!--        </div>-->
-
-<!--        <div class="read-more-wrapper clearfix">-->
-<!--          <a class="float-right" href="#">read more</a>-->
-<!--        </div>-->
-<!--      </article>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
 <main class="main">
   <section class="banner-container">
     <div class="container relative test-banner">
@@ -61,59 +14,53 @@
   <section class="video-section">
     <div class="container">
       <h1 class="title-heading">
-        Featured |  <a class="link" href="#">view all featured media</a>
+        Featured | <a class="link" href="#">view all featured media</a>
       </h1>
       <div class="video-wrapper">
-        <iframe class="video-iframe" src="https://www.youtube.com/embed/TSdGUaHj3TA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe class="video-iframe" src="https://www.youtube.com/embed/TSdGUaHj3TA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe class="video-iframe" src="https://www.youtube.com/embed/TSdGUaHj3TA" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        <iframe class="video-iframe" src="https://www.youtube.com/embed/TSdGUaHj3TA" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
       </div>
     </div>
   </section>
   <section class="newses-section">
     <div class="container">
       <h1 class="title-heading">
-        Featured |  <a class="link" href="#">view all featured media</a>
+        Featured | <a class="link" href="#">view all featured media</a>
       </h1>
-      <div class="article-wrapper">
-        <article class="article">
-          <!-- <img src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg" alt="design"> -->
-          <div class="arcile-img-div" style="background-image: url('http://qnimate.com/wp-content/uploads/2014/03/images2.jpg');"></div>
-          <h1 class="article-title">Typography Lab</h1>
-        </article>
-        <article class="article">
-          <!-- <img src="img/design.jpg" alt="design"> -->
-          <div class="arcile-img-div" style="background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/6/63/IMG_%28business%29.svg/1200px-IMG_%28business%29.svg.png');"></div>
-          <h1 class="article-title">Typography Lab</h1>
-        </article>
-        <article class="article">
-          <img src="img/design.jpg" alt="design">
-          <h1 class="article-title">Typography Lab</h1>
-        </article>
-        <article class="article">
-          <img src="img/design.jpg" alt="design">
-          <h1 class="article-title">Typography Lab</h1>
-        </article>
+      <div class="article-wrapper" *ngIf="data">
+        <a [routerLink]="['/details/', item.id]" class="article" *ngFor="let item of data">
+          <img [src]="item.img" [alt]="item.title">
+          <h1 class="article-title">{{item.title}}</h1>
+        </a>
       </div>
     </div>
   </section>
   <section class="feature-block">
     <div class="container">
       <h1 class="title-heading">
-        Featured |  <a class="link" href="#">view all featured media</a>
+        Featured | <a class="link" href="#">view all featured media</a>
       </h1>
       <div class="featured-wrapper">
         <article class="feature-item">
           <h1 class="title">Responsive Web Design</h1>
           <div class="content-wrapper">
             <img class="content-img inline-block vertical-top" src="img/finger.png" alt="finger"><!--
-                            --><p class="content-p inline-block vertical-top">approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation.</p>
+                            --><p class="content-p inline-block vertical-top">approach that suggests that design and
+            development should respond to the user's behavior and environment based on screen size, platform and
+            orientation.</p>
           </div>
         </article>
         <article class="feature-item">
           <h1 class="title">Responsive Web Design</h1>
           <div class="content-wrapper">
             <img class="content-img inline-block vertical-top" src="img/finger.png" alt="finger"><!--
-                            --><p class="content-p inline-block vertical-top">approach that suggests that design and development should respond to the user's behavior and environment based on screen size, platform and orientation.</p>
+                            --><p class="content-p inline-block vertical-top">approach that suggests that design and
+            development should respond to the user's behavior and environment based on screen size, platform and
+            orientation.</p>
           </div>
         </article>
       </div>

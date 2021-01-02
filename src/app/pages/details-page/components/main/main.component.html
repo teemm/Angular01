@@ -15,24 +15,15 @@
     </ul>
   </div>
 </div>
-<article class="new-artcle container">
+<article class="new-artcle container" *ngIf="printData">
   <div class="date-block">
     <span class="date">18</span>
     <span class="month">march</span>
   </div>
-  <h1 class="new-title">Typography Lab</h1>
+  <h1 class="new-title">{{printData.title}}</h1>
   <div class="article-text-wrapper">
-    <img class="float-left new-article-img" src="img/typography.jpg" alt="typography">
-    <p class="article-text-p">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque arcu eget sem efficitur, in imperdiet magna finibus. Morbi quis est a dolor auctor luctus. Proin in libero quis tortor facilisis euismod. Phasellus pellentesque pharetra enim tincidunt blandit. Curabitur elementum condimentum ipsum a mollis. Morbi fermentum velit et viverra ullamcorper. Praesent sed sem mattis, placerat elit et, vestibulum leo. Vivamus posuere eu libero et sollicitudin. In hac habitasse platea dictumst. Ut maximus augue semper, vulputate libero sed, semper tellus.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque arcu eget sem efficitur, in imperdiet magna finibus. Morbi quis est a dolor auctor luctus. Proin in libero quis tortor facilisis euismod. Phasellus pellentesque pharetra enim tincidunt blandit. Curabitur elementum condimentum ipsum a mollis. Morbi fermentum velit et viverra ullamcorper. Praesent sed sem mattis, placerat elit et, vestibulum leo. Vivamus posuere eu libero et sollicitudin. In hac habitasse platea dictumst. Ut maximus augue semper, vulputate libero sed, semper tellus.
-    </p>
-    <p class="article-text-p">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque arcu eget sem efficitur, in imperdiet magna finibus. Morbi quis est a dolor auctor luctus. Proin in libero quis tortor facilisis euismod. Phasellus pellentesque pharetra enim tincidunt blandit. Curabitur elementum condimentum ipsum a mollis. Morbi fermentum velit et viverra ullamcorper. Praesent sed sem mattis, placerat elit et, vestibulum leo. Vivamus posuere eu libero et sollicitudin. In hac habitasse platea dictumst. Ut maximus augue semper, vulputate libero sed, semper tellus.
-    </p>
-    <p class="article-text-p">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis scelerisque arcu eget sem efficitur, in imperdiet magna finibus. Morbi quis est a dolor auctor luctus. Proin in libero quis tortor facilisis euismod. Phasellus pellentesque pharetra enim tincidunt blandit. Curabitur elementum condimentum ipsum a mollis. Morbi fermentum velit et viverra ullamcorper. Praesent sed sem mattis, placerat elit et, vestibulum leo. Vivamus posuere eu libero et sollicitudin. In hac habitasse platea dictumst. Ut maximus augue semper, vulputate libero sed, semper tellus.
-    </p>
+    <img class="float-left new-article-img" [src]="printData.img" [alt]="printData.title">
+    <p class="article-text-p">{{printData.longText}}</p>
   </div>
 </article>
 <div class="reseurce-tag">
