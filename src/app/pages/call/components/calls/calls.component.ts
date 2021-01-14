@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {CallsService} from '../../../../services/calls.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Subscription} from 'rxjs';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-calls',
@@ -15,14 +16,17 @@ export class CallsComponent implements OnInit, OnDestroy {
   private subscription: Subscription = new Subscription();
 
   constructor(private callsService: CallsService,
+              private route: ActivatedRoute,
               private fb: FormBuilder) {
   }
 
   ngOnInit(): void {
-    this.getData();
+    // this.getData();
+    this.data = this.route.snapshot.data.calls.data;
     this.form = this.fb.group({
       text: ['', [Validators.required]]
     });
+    console.log(this.route.snapshot.data);
   }
 
   delete(item): void {

@@ -12,25 +12,25 @@ export class CallsService {
   }
 
   getData(): Observable<any> {
-    return this.httpClient.get('https://us-central1-js04-b4877.cloudfunctions.net/tasks');
+    return this.httpClient.get('tasks');
   }
 
   deleteItem(id: number): Observable<any> {
-    return this.httpClient.delete('https://us-central1-js04-b4877.cloudfunctions.net/tasks/' + id);
+    return this.httpClient.delete('tasks/' + id);
   }
 
   activeItem(item: any): Observable<any> {
-    const url = 'https://us-central1-js04-b4877.cloudfunctions.net/tasks/check/' + item.id;
+    const url = 'check/' + item.id;
     return this.httpClient.post(url, {});
   }
 
   deActiveItem(item: any): Observable<any> {
-    const url = 'https://us-central1-js04-b4877.cloudfunctions.net/tasks/uncheck/' + item.id;
+    const url = 'uncheck/' + item.id;
     return this.httpClient.post(url, {});
   }
 
   createItem(data: any): Observable<any> {
-    const url = 'https://us-central1-js04-b4877.cloudfunctions.net/tasks/create';
+    const url = 'tasks/create';
     return this.httpClient.post(url, data);
   }
 }

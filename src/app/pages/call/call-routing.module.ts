@@ -1,11 +1,15 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {CallsComponent} from './components/calls/calls.component';
+import {CallsResolver} from './resolvers/calls.resolver';
 
 const routes: Routes = [
   {
     path: '',
     component: CallsComponent,
+    resolve: {
+      calls: CallsResolver
+    }
   }
 ];
 
