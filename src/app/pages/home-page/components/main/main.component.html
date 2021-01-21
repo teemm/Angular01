@@ -1,3 +1,4 @@
+<app-header></app-header>
 <main class="main">
   <section class="banner-container">
     <div class="container relative test-banner">
@@ -35,6 +36,7 @@
         <a [routerLink]="['/details/', item.id]" class="article" *ngFor="let item of data">
           <img [src]="item.img" [alt]="item.title">
           <h1 class="article-title">{{item.title}}</h1>
+          <span class="date">{{item.date | customDate}}</span>
         </a>
       </div>
     </div>
@@ -84,3 +86,4 @@
     </ul>
   </div>
 </main>
+<app-footer></app-footer>

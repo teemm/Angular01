@@ -1,0 +1,20 @@
+<div [ngSwitch]="activeValue">
+  <div *ngSwitchCase="'happy'">this div is happy</div>
+  <div *ngSwitchCase="'sad'">this div is sad</div>
+  <div *ngSwitchCase="'funny'">this div is funny</div>
+  <div *ngSwitchCase="'supperHappy'">this div is supperHappy</div>
+  <div *ngSwitchDefault>this div is uknown</div>
+</div>
+<label for="red">red</label>
+<input type="radio" id="red" name="colors" (click)="setColor('red')">
+
+<label for="blue">blue</label>
+<input type="radio" id="blue" name="colors" (click)="setColor('blue')">
+
+<label for="green">green</label>
+<input type="radio" id="green" name="colors" (click)="setColor('green')">
+
+<p appHilights [color]="activeColor">test</p>
+
+<div appHilights [color]="activeColor">this is div</div>
+

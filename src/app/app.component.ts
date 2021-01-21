@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {CallsService} from './core/services/calls.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'routing-app';
+
+  constructor(private callsService: CallsService) {
+    this.callsService.getData().subscribe((res) => {
+      console.log(res);
+    })
+  }
 }

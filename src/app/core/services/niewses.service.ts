@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {MainData} from '../models/main-data';
 
 @Injectable({
@@ -19,6 +19,7 @@ export class NiewsesService {
         'Praesent sed sem mattis, placerat elit et, vestibulum leo. Vivamus posuere eu libero et ' +
         'sollicitudin. In hac habitasse platea dictumst. Ut maximus augue semper, vulputate ' +
         'libero sed, semper tellus.\n',
+      date: new Date('Thu Jan 21 2021 20:53:04 GMT+0400'),
     },
     {
       id: 2,
@@ -32,6 +33,7 @@ export class NiewsesService {
         'Praesent sed sem mattis, placerat elit et, vestibulum leo. Vivamus posuere eu libero et ' +
         'sollicitudin. In hac habitasse platea dictumst. Ut maximus augue semper, vulputate ' +
         'libero sed, semper tellus.\n',
+      date: new Date('Thu Jan 22 2021 20:53:04 GMT+0400'),
     },
     {
       id: 3,
@@ -45,6 +47,7 @@ export class NiewsesService {
         'Praesent sed sem mattis, placerat elit et, vestibulum leo. Vivamus posuere eu libero et ' +
         'sollicitudin. In hac habitasse platea dictumst. Ut maximus augue semper, vulputate ' +
         'libero sed, semper tellus.\n',
+      date: new Date('Thu Jan 13 2021 20:53:04 GMT+0400'),
     },
     {
       id: 4,
@@ -58,6 +61,7 @@ export class NiewsesService {
         'Praesent sed sem mattis, placerat elit et, vestibulum leo. Vivamus posuere eu libero et ' +
         'sollicitudin. In hac habitasse platea dictumst. Ut maximus augue semper, vulputate ' +
         'libero sed, semper tellus.\n',
+      date: new Date('Thu Jan 21 2021 10:53:04 GMT+0400'),
     }
   ];
 }
