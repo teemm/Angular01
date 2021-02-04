@@ -4,7 +4,6 @@ import {CommonModule} from '@angular/common';
 import {CallRoutingModule} from './call-routing.module';
 import {CallsComponent} from './components/calls/calls.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {SharedModule} from '../../shared/shared.module';
 
 
 @NgModule({
@@ -12,7 +11,6 @@ import {SharedModule} from '../../shared/shared.module';
   imports: [
     CommonModule,
     CallRoutingModule,
-    SharedModule,
     FormsModule,
     ReactiveFormsModule
   ]

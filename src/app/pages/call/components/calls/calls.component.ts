@@ -27,6 +27,10 @@ export class CallsComponent implements OnInit, OnDestroy {
     this.form = this.fb.group({
       text: ['', [Validators.required]]
     });
+    this.callsService.test();
+    this.callsService.testSubject.subscribe(res => {
+      console.log(res, "tt");
+    });
   }
 
   delete(item): void {
@@ -40,7 +44,7 @@ export class CallsComponent implements OnInit, OnDestroy {
 
   getData(): void {
     this.testDate = this.callsService.getData();
-    console.log(this.testDate);
+    // console.log(this.testDate);
     // .subscribe((res) => {
     //     this.data = res.data;
     //     console.log(this.data, "from getData")
