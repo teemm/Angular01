@@ -2,8 +2,6 @@
   <input formControlName="text" type="text" placeholder="Your Text">
   <button>შენახვა</button>
 </form>
-
-
 <div class="post-wrapper container" *ngIf="testDate | async">
   <div class="post" *ngFor="let item of testDate | async"
        [class.red]="!item.completed">
@@ -25,3 +23,7 @@
   <div *ngIf="errors">someting wrong</div>
   <div *ngIf="!errors">loading</div>
 </div>
+<h1>test form</h1>
+<form [formGroup]="searchForm">
+  <input type="search" formControlName="search" placeholder="typing">
+</form>

@@ -3,6 +3,7 @@ import {CallsService} from '../../../../core/services/calls.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Subscription} from 'rxjs';
 import {ActivatedRoute} from '@angular/router';
+import {debounceTime, switchMap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-calls',
@@ -13,6 +14,7 @@ export class CallsComponent implements OnInit, OnDestroy {
   public data: any[] = null;
   public testDate: any;
   public form: FormGroup;
+  public searchForm: FormGroup;
   public errors = false;
   private subscription: Subscription = new Subscription();
 
@@ -27,10 +29,25 @@ export class CallsComponent implements OnInit, OnDestroy {
     this.form = this.fb.group({
       text: ['', [Validators.required]]
     });
-    this.callsService.test();
-    this.callsService.testSubject.subscribe(res => {
-      console.log(res, "tt");
-    });
+
+
+    this.searchForm = this.fb.group({search: ''});
+    this.searchForm.get('search').valueChanges.pipe(
+      debounceTime(400),
+      switchMap(res => this.callsService.search(res))
+    ).subscribe((res) => {
+        console.log(res);
+      },
+      error => {
+        console.log(error);
+      },
+      () => {
+        console.log('strem just end');
+      });
+    // this.callsService.test();
+    // this.callsService.testSubject.subscribe(res => {
+    //   console.log(res, 'tt');
+    // });
   }
 
   delete(item): void {

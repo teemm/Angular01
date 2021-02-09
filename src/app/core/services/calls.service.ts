@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {BehaviorSubject, Observable, of} from 'rxjs';
-import {map, skip, tap} from 'rxjs/operators';
+import {map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -17,21 +17,31 @@ export class CallsService {
   }
 
   test(): void {
-    const data = this.httpClient.get<any>('tasks');
-    // const data3 = interval(1000);
-    setTimeout(() => {
-      this.testSubject.next('from test');
-    }, 4000);
-    const data1 = of(1, 2, 3, 4);
-    const data2 = data1.pipe(
-      skip(2),
-      tap(val => console.log(`BEFORE MAP: ${val}`)),
-      // map(val => val + 10),
-      // filter( val => val % 2 === 0)
-      // first()
-      // take(3)
-    );
-    // console.log(data, data1);
+    // timerOne emits first value at 1s, then once every 4s
+//     const timerOne$ = timer(1000, 4000);
+// // timerTwo emits first value at 2s, then once every 4s
+//     const timerTwo$ = timer(2000, 4000);
+// // timerThree emits first value at 3s, then once every 4s
+//     const timerThree$ = timer(3000, 4000);
+//     const user = of('user');
+//     const request1 = of('request1', 'request4', 'test', 'etst', 'teasdas', 'teasd');
+//     const request2 = of('request2', 'request3');
+//     const age = 26;
+//     combineLatest(user, request1, request2)
+//       .subscribe(([user, request1, request2]) => {
+//         console.log(
+//           `Timer One Latest: ${user},
+//            Timer Two Latest: ${request1},
+//            Timer Three Latest: ${request2} from combine latest`);
+//       });
+//
+//     zip(user, request1).pipe().subscribe(([res, res2]) => {
+//       console.log(`Timer One Latest: ${res},
+//            Timer Two Latest: ${res2} from zip`);
+//     });
+//
+//     const test = 'Temo Pkhaladze' + age;
+//     const test2 = `Temo Pkhaladze ${age}`;
   }
 
   getData(): Observable<any> {
@@ -56,5 +66,13 @@ export class CallsService {
   createItem(data: any): Observable<any> {
     const url = `tasks/create`;
     return this.httpClient.post(url, data);
+  }
+
+  search(value): Observable<any> {
+    return this.httpClient.get(`api/products?q=${value}`);
+  }
+
+  search1(value): Observable<any> {
+    return of(value);
   }
 }

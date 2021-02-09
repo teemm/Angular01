@@ -17,9 +17,6 @@ export class AppComponent {
               private meta: Meta,
               @Inject(PLATFORM_ID) private platformId: any,
               private router: Router) {
-    this.callsService.getData().subscribe((res) => {
-      console.log(res);
-    });
     if (isPlatformBrowser(this.platformId)) {
       const ww = window;
       ww.addEventListener('scroll', () => {
