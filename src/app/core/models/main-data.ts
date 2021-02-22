@@ -3,4 +3,5 @@ export interface MainData {
   id: number;
   img: string;
   longText: string;
+  date: Date;
 }

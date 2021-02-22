@@ -1,12 +1,11 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {AuthGuard} from './auth.guard';
+import {AuthGuard} from './core/guards/auth.guard';
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./pages/home-page/home-page.module').then(item => item.HomePageModule),
-    canActivate: [AuthGuard]
+    loadChildren: () => import('./pages/home-page/home-page.module').then(item => item.HomePageModule)
   },
   {
     path: 'details',
@@ -18,7 +17,12 @@ const routes: Routes = [
   },
   {
     path: 'contact',
-    loadChildren: () => import('./pages/contact/contact.module').then(item => item.ContactModule)
+    loadChildren: () => import('./pages/contact/contact.module').then(item => item.ContactModule),
+    canActivate: [AuthGuard]
+  }, {
+    path: 'directives',
+    loadChildren: () => import('./pages/directives/directives.module').then(item => item.DirectivesModule),
+    canActivate: [AuthGuard]
   }, {
     path: 'calls',
     loadChildren: () => import('./pages/call/call.module').then(t => t.CallModule),

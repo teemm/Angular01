@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {NiewsesService} from '../../../../services/niewses.service';
-import {MainData} from '../../../../models/main-data';
+import {NiewsesService} from '../../../../core/services/niewses.service';
+import {MainData} from '../../../../core/models/main-data';
 
 @Component({
   selector: 'app-main',
