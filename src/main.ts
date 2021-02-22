@@ -9,12 +9,7 @@ if (environment.production) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-<<<<<<< HEAD
   platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 });
-=======
-     platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
-   });
->>>>>>> 0546f9f08de2bfddc5373b6f5bbe2af2b17b61e3
+

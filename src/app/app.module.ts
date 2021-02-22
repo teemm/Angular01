@@ -6,20 +6,17 @@ import {CoreModule} from './core/core.module';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
 import {UrlInterceptor} from './core/interceptors/url.interceptor';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    RouterModule,
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-<<<<<<< HEAD
-=======
     SharedModule,
     CoreModule,
->>>>>>> 0546f9f08de2bfddc5373b6f5bbe2af2b17b61e3
     HttpClientModule,
-    AppRoutingModule,
-    // AppRoutingModule
   ],
   providers: [
     {
