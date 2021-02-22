@@ -14,7 +14,7 @@ import {UrlInterceptor} from './url.interceptor';
     FooterComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     AppRoutingModule,
     // AppRoutingModule
